@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AppDelegate.h"
+#import "SMAppDelegate.h"
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {

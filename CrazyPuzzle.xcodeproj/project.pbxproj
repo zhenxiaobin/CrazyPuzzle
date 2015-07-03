@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		600468AF1B4676DF0066E5BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 600468AE1B4676DF0066E5BD /* main.m */; };
-		600468B21B4676DF0066E5BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 600468B11B4676DF0066E5BD /* AppDelegate.m */; };
+		600468B21B4676DF0066E5BD /* SMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 600468B11B4676DF0066E5BD /* SMAppDelegate.m */; };
 		600468B41B4676DF0066E5BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 600468B31B4676DF0066E5BD /* Images.xcassets */; };
 		600468B71B4676DF0066E5BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 600468B51B4676DF0066E5BD /* LaunchScreen.xib */; };
 		600468C31B4676DF0066E5BD /* CrazyPuzzleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 600468C21B4676DF0066E5BD /* CrazyPuzzleTests.m */; };
@@ -28,8 +28,8 @@
 		600468A91B4676DF0066E5BD /* CrazyPuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrazyPuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		600468AD1B4676DF0066E5BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		600468AE1B4676DF0066E5BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		600468B01B4676DF0066E5BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		600468B11B4676DF0066E5BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		600468B01B4676DF0066E5BD /* SMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMAppDelegate.h; sourceTree = "<group>"; };
+		600468B11B4676DF0066E5BD /* SMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMAppDelegate.m; sourceTree = "<group>"; };
 		600468B31B4676DF0066E5BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		600468B61B4676DF0066E5BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		600468BC1B4676DF0066E5BD /* CrazyPuzzleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrazyPuzzleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,10 +76,13 @@
 		600468AB1B4676DF0066E5BD /* CrazyPuzzle */ = {
 			isa = PBXGroup;
 			children = (
-				600468B01B4676DF0066E5BD /* AppDelegate.h */,
-				600468B11B4676DF0066E5BD /* AppDelegate.m */,
-				600468B31B4676DF0066E5BD /* Images.xcassets */,
-				600468B51B4676DF0066E5BD /* LaunchScreen.xib */,
+				600468D71B4679120066E5BD /* Application */,
+				600468D81B46791D0066E5BD /* Base */,
+				600468D61B4678FD0066E5BD /* Models */,
+				600468D51B4678F10066E5BD /* Views */,
+				600468D41B4678E50066E5BD /* Controllers */,
+				600468D31B4678DE0066E5BD /* Lib */,
+				600468D21B4678D20066E5BD /* Resource */,
 				600468AC1B4676DF0066E5BD /* Supporting Files */,
 			);
 			path = CrazyPuzzle;
@@ -88,6 +91,8 @@
 		600468AC1B4676DF0066E5BD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				600468B31B4676DF0066E5BD /* Images.xcassets */,
+				600468B51B4676DF0066E5BD /* LaunchScreen.xib */,
 				600468AD1B4676DF0066E5BD /* Info.plist */,
 				600468AE1B4676DF0066E5BD /* main.m */,
 			);
@@ -109,6 +114,57 @@
 				600468C11B4676DF0066E5BD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		600468D21B4678D20066E5BD /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		600468D31B4678DE0066E5BD /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		600468D41B4678E50066E5BD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		600468D51B4678F10066E5BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		600468D61B4678FD0066E5BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		600468D71B4679120066E5BD /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				600468B01B4676DF0066E5BD /* SMAppDelegate.h */,
+				600468B11B4676DF0066E5BD /* SMAppDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		600468D81B46791D0066E5BD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +211,7 @@
 		600468A11B4676DF0066E5BD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SM;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = SevenMay;
 				TargetAttributes = {
@@ -210,7 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				600468B21B4676DF0066E5BD /* AppDelegate.m in Sources */,
+				600468B21B4676DF0066E5BD /* SMAppDelegate.m in Sources */,
 				600468AF1B4676DF0066E5BD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +455,7 @@
 				600468C81B4676DF0066E5BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		600468C91B4676DF0066E5BD /* Build configuration list for PBXNativeTarget "CrazyPuzzleTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +464,7 @@
 				600468CB1B4676DF0066E5BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
