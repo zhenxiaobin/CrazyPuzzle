@@ -10,7 +10,6 @@
 		600468AF1B4676DF0066E5BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 600468AE1B4676DF0066E5BD /* main.m */; };
 		600468B21B4676DF0066E5BD /* SMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 600468B11B4676DF0066E5BD /* SMAppDelegate.m */; };
 		600468B41B4676DF0066E5BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 600468B31B4676DF0066E5BD /* Images.xcassets */; };
-		600468B71B4676DF0066E5BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 600468B51B4676DF0066E5BD /* LaunchScreen.xib */; };
 		600468C31B4676DF0066E5BD /* CrazyPuzzleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 600468C21B4676DF0066E5BD /* CrazyPuzzleTests.m */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +30,6 @@
 		600468B01B4676DF0066E5BD /* SMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMAppDelegate.h; sourceTree = "<group>"; };
 		600468B11B4676DF0066E5BD /* SMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMAppDelegate.m; sourceTree = "<group>"; };
 		600468B31B4676DF0066E5BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		600468B61B4676DF0066E5BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		600468BC1B4676DF0066E5BD /* CrazyPuzzleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrazyPuzzleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		600468C11B4676DF0066E5BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		600468C21B4676DF0066E5BD /* CrazyPuzzleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrazyPuzzleTests.m; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				600468B31B4676DF0066E5BD /* Images.xcassets */,
-				600468B51B4676DF0066E5BD /* LaunchScreen.xib */,
 				600468AD1B4676DF0066E5BD /* Info.plist */,
 				600468AE1B4676DF0066E5BD /* main.m */,
 			);
@@ -248,7 +245,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				600468B71B4676DF0066E5BD /* LaunchScreen.xib in Resources */,
 				600468B41B4676DF0066E5BD /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,17 +285,6 @@
 			targetProxy = 600468BD1B4676DF0066E5BD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		600468B51B4676DF0066E5BD /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				600468B61B4676DF0066E5BD /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		600468C41B4676DF0066E5BD /* Debug */ = {
@@ -386,6 +371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = CrazyPuzzle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -396,6 +382,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = CrazyPuzzle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
