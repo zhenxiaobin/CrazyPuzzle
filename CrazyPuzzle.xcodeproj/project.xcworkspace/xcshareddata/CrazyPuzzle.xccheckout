@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8C269403-FA6F-4345-95A1-95F71B2B3AE0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F904F8ABF273AAD5BDA20D9B5A42D1C6D9789498</key>
+		<string>https://github.com/zhenxiaobin/CrazyPuzzle.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CrazyPuzzle.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F904F8ABF273AAD5BDA20D9B5A42D1C6D9789498</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/zhenxiaobin/CrazyPuzzle.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F904F8ABF273AAD5BDA20D9B5A42D1C6D9789498</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F904F8ABF273AAD5BDA20D9B5A42D1C6D9789498</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CrazyPuzzle</string>
+		</dict>
+	</array>
+</dict>
+</plist>
