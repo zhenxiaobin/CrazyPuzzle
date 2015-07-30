@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>8C269403-FA6F-4345-95A1-95F71B2B3AE0</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>CrazyPuzzle</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>F904F8ABF273AAD5BDA20D9B5A42D1C6D9789498</key>
 		<string>https://github.com/zhenxiaobin/CrazyPuzzle.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CrazyPuzzle.xcodeproj/project.xcworkspace</string>
+	<string>CrazyPuzzle.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>F904F8ABF273AAD5BDA20D9B5A42D1C6D9789498</key>
