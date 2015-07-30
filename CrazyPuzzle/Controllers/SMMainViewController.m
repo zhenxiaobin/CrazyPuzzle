@@ -13,7 +13,10 @@
 @property (nonatomic, strong) UIImageView *upCloudImage;
 @property (nonatomic, strong) UIImageView *downCloudImage;
 @property (nonatomic, strong) UIImageView *eyeImage;
-@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, strong) NSTimer *timer;/**< 云彩定时器*/
+@property (nonatomic, strong) NSTimer *openEyeTimer;/**< 眨眼定时器*/
+@property (nonatomic, strong) NSString *isOpenEye;/**< 眨眼*/
+@property (nonatomic) double spaceTime;/**< 眨眼间隔时间*/
 
 @end
 
@@ -22,6 +25,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    _isOpenEye = @"YES";
+    _spaceTime = 0;
     
     [self showMainView];
 }
@@ -66,17 +72,6 @@
     _eyeImage.frame = CGRectMake(138, 78, 100, 40);
     _eyeImage.image = [UIImage imageNamed:@"dl_logo_01.png"];
     [logoView addSubview:_eyeImage];
-    
-    
-//    UIImageView *openEyeImage = [[UIImageView alloc] init];
-//    openEyeImage.frame = CGRectMake(138, 78, 100, 40);
-//    openEyeImage.image = [UIImage imageNamed:@"dl_logo_01.png"];
-//    [logoView addSubview:openEyeImage];
-    
-//    UIImageView *closeEyeImage = [[UIImageView alloc] init];
-//    closeEyeImage.frame = CGRectMake(138, 78, 100, 40);
-//    closeEyeImage.image = [UIImage imageNamed:@"dl_logo_02.png"];
-//    [logoView addSubview:closeEyeImage];
     
     // 按钮设置
     UIView *btnView = [[UIView alloc] init];
@@ -157,18 +152,13 @@
 
 - (void)moveImage
 {
-    NSLog(@"-----");
-    
-    [UIView animateWithDuration:5 animations:^{
-        _eyeImage.image = [UIImage imageNamed:@"dl_logo_02.png"];
-    }];
-    
     __block CGFloat changeValue = 0;
     changeValue = changeValue + 10;
     
     CGRect upCloudRect = _upCloudImage.frame;
     CGRect downCloudRect = _downCloudImage.frame;
     
+    // 云彩循环移动
     if (_upCloudImage.frame.origin.x == -120) {
         
         CGRect newUpCloudRect = CGRectMake(self.view.bounds.size.width, upCloudRect.origin.y, upCloudRect.size.width, upCloudRect.size.height);
@@ -187,13 +177,33 @@
         }];
     }
 }
+
+- (void)isOpenEyeTimer
+{
+    if ([_isOpenEye isEqualToString:@"YES"] && fmod(_spaceTime, 10) == 0) {
+        [UIView animateWithDuration:5 animations:^{
+            _eyeImage.image = [UIImage imageNamed:@"dl_logo_02.png"];
+            _isOpenEye = @"NO";
+        }];
+    } else {
+        [UIView animateWithDuration:5 animations:^{
+            _eyeImage.image = [UIImage imageNamed:@"dl_logo_01.png"];
+            _isOpenEye = @"YES";
+        }];
+    }
+    _spaceTime++;
+}
+
 /**
  *  开启定时器
  */
-- (void)addTimer{
-
-     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(moveImage) userInfo:nil repeats:YES];
-   [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+- (void)addTimer
+{
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(moveImage) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    
+    self.openEyeTimer = [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(isOpenEyeTimer) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.openEyeTimer forMode:NSRunLoopCommonModes];
 }
 
 /**
@@ -201,7 +211,7 @@
  */
 - (void)removeTimer
 {
-     [self.timer invalidate];
+    [self.timer invalidate];
 }
 
 - (void)didReceiveMemoryWarning {
