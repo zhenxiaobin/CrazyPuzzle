@@ -7,6 +7,7 @@
 //
 
 #import "SMMainViewController.h"
+#import "SMEmigratedViewController.h"
 
 @interface SMMainViewController ()
 
@@ -25,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     _isOpenEye = @"YES";
     _spaceTime = 0;
     
@@ -78,25 +79,34 @@
     btnView.frame = CGRectMake(0, self.view.frame.size.height/2, self.view.frame.size.width, self.view.frame.size.height/2 - 50);
     [self.view addSubview:btnView];
     
+    // 闯关模式
     UIButton *emigratedBtn = [[UIButton alloc] init];
     emigratedBtn.frame = CGRectMake((self.view.frame.size.width - 187)/2, (btnView.frame.size.height - 50 * 3)/4, 187, 50);
     [emigratedBtn setImage:[UIImage imageNamed:@"dl_cgms_cn.png"] forState:UIControlStateNormal];
     [emigratedBtn setBackgroundImage:[UIImage imageNamed:@"hong.png"] forState:UIControlStateNormal];
     [emigratedBtn setBackgroundImage:[UIImage imageNamed:@"hong_sel.png"] forState:UIControlStateHighlighted];
+    [emigratedBtn setTag:1];
+    [emigratedBtn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
     [btnView addSubview:emigratedBtn];
     
+    // PK模式
     UIButton *pkBtn = [[UIButton alloc] init];
     pkBtn.frame = CGRectMake((self.view.frame.size.width - 187)/2, (btnView.frame.size.height - 50 * 3)/4 * 2 + 50, 187, 50);
     [pkBtn setImage:[UIImage imageNamed:@"dl_PK.png"] forState:UIControlStateNormal];
     [pkBtn setBackgroundImage:[UIImage imageNamed:@"huang.png"] forState:UIControlStateNormal];
     [pkBtn setBackgroundImage:[UIImage imageNamed:@"huang_sel.png"] forState:UIControlStateHighlighted];
+    [pkBtn setTag:2];
+    [pkBtn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
     [btnView addSubview:pkBtn];
     
+    // 成语故事
     UIButton *phraseBtn = [[UIButton alloc] init];
     phraseBtn.frame = CGRectMake((self.view.frame.size.width - 187)/2, (btnView.frame.size.height - 50 * 3)/4 * 3 + 100, 187, 50);
     [phraseBtn setImage:[UIImage imageNamed:@"dl_diangu_cn.png"] forState:UIControlStateNormal];
     [phraseBtn setBackgroundImage:[UIImage imageNamed:@"diangu.png"] forState:UIControlStateNormal];
     [phraseBtn setBackgroundImage:[UIImage imageNamed:@"diangu_sel.png"] forState:UIControlStateHighlighted];
+    [phraseBtn setTag:3];
+    [phraseBtn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
     [btnView addSubview:phraseBtn];
     
     // 选项功能设置
@@ -194,6 +204,31 @@
     _spaceTime++;
 }
 
+- (void)btnAction:(UIButton *)btn
+{
+    switch (btn.tag) {
+        case 1:
+        {
+            SMEmigratedViewController *evc = [[SMEmigratedViewController alloc] init];
+//            self.navigationController.interactivePopGestureRecognizer.enabled = NO;//禁止滑动返回
+            [self.navigationController pushViewController:evc animated:YES];
+        }
+            break;
+        case 2:
+        {
+           
+        }
+            break;
+        case 3:
+        {
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
 /**
  *  开启定时器
  */
